@@ -1,0 +1,57 @@
+
+  
+  .featured {
+    margin-top: 0rem; /* Add space between hero and featured */
+    
+  }
+  
+  .featured h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .featured-logos {
+    background: #f1f1f1;
+    border-radius: 100px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Ensure logos can wrap on smaller screens */
+  }
+  
+  .featured-logos img {
+    max-width: 100px;
+    height: auto;
+    filter: grayscale(100%) brightness(0.7);
+    transition: filter 0.3s ease;
+  }
+  
+  .featured-logos img:hover {
+    filter: grayscale(0%) brightness(1);
+  }
+  
+  @media (max-width: 768px) {
+    .featured {
+        padding: 2rem 1rem; /* Reduced padding for smaller screens */
+    }
+
+    .featured h3 {
+        font-size: 1.8rem; /* Adjusted font size for mobile */
+    }
+
+    .featured-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1.5rem 1rem; /* Added more padding for better spacing */
+    }
+
+    .featured-logos img {
+        width: 80px; /* Adjusted logo size for smaller screens */
+        max-width: 90px; /* Max width to avoid stretching */
+        padding: 0.8rem; /* Reduced padding around logos */
+    }
+}

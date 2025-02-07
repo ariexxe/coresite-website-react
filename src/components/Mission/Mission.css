@@ -1,0 +1,188 @@
+.mission {
+  margin-top: 5rem;
+  width: 100%;
+  padding: 4rem 0;
+  background: var(--background-color);
+  text-align: center;
+}
+
+.mission .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mission h2 {
+  color: #007BFF;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-statement {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.mission-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for the card */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.1);
+  background: #ffffff;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: #007BFF;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.icon-circle::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #007BFF;
+  opacity: 0.3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+/* Hover effects for the icon circle */
+.card:hover .icon-circle {
+  transform: scale(1.1);
+  background: #0056b3; /* Darker blue on hover */
+}
+
+.card:hover .icon-circle::after {
+  width: 110px;
+  height: 110px;
+  opacity: 0.5;
+}
+
+.icon-circle i {
+  font-size: 2rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.card:hover .icon-circle i {
+  transform: scale(1.1);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+  color: #007BFF;
+}
+
+.card p {
+  color: #020202;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.card:hover p {
+  color: #333;
+}
+
+.testimonial {
+  max-width: 600px;
+  margin: 3rem auto 0;
+  font-size: 1.1rem;
+  color: #666;
+  font-style: italic;
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  color: #333;
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .mission {
+    padding: 3rem 1rem; /* Adjust padding for mobile */
+  }
+
+  .mission h2 {
+    font-size: 2rem; /* Adjusted heading font size */
+    margin-bottom: 1.2rem;
+  }
+
+  .mission-statement {
+    padding: 0 1rem;
+    font-size: 1.1rem; /* Slightly smaller font size for better readability */
+    line-height: 1.5;
+  }
+
+  .mission-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    max-width: 350px; /* Ensures cards aren't too wide on mobile */
+    margin: 0 auto;
+    padding: 1.5rem; /* Reduced padding for mobile devices */
+  }
+
+  /* Adjust hover effect for mobile */
+  .card:hover {
+    transform: translateY(-5px); /* Smaller lift on mobile */
+  }
+
+  .icon-circle {
+    width: 60px; /* Adjust icon circle size */
+    height: 60px;
+  }
+
+  .icon-circle::after {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon-circle i {
+    font-size: 1.5rem; /* Smaller icon size */
+  }
+
+  .testimonial {
+    font-size: 1rem; /* Adjusted font size for testimonial */
+    margin-top: 2rem;
+  }
+}

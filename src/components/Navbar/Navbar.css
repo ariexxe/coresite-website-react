@@ -1,0 +1,110 @@
+:root {
+  --text-color: black;  /* Set your text color variable to black */
+  --primary-color: #007bff;  /* Set the primary color for hover and active states */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--background-color);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex; /* Display normally in PC mode */
+  gap: 4rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-color);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1100; /* Ensure it's above the navbar */
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 2px;
+    background: var(--text-color);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links {
+    display: none;  /* Hide by default in mobile */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--background-color);
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;  /* Show when active */
+    opacity: 1; /* Ensure full opacity when visible */
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+/* This media query ensures the links are always visible in desktop mode */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;  /* force display flex for desktop */
+    opacity: 1;
+    position: static;  /* make sure the nav links are not absolute */
+    transform: none;   /* Ensure no transition is applied in desktop mode */
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

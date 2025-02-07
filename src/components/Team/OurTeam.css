@@ -1,0 +1,146 @@
+.our-team {
+  text-align: center;
+  padding: 6rem 2rem;
+  
+}
+
+.team-title {
+  color: #007BFF;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.team-card {
+  text-align: center;
+  border-radius: 10px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image {
+  transform: scale(1.1);
+}
+
+.team-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.team-role {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.team-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto 0;
+  max-width: fit-content;
+}
+
+.nav-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #e5e7eb;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.nav-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-btn.prev {
+  border-color: #0056b3;
+  color: #0056b3;
+}
+
+.nav-btn.next {
+  background: #0056b3;
+  border-color: #0056b3;
+  color: white;
+}
+
+.nav-btn.prev:hover {
+  background: #0056b3;
+  color: white;
+}
+
+.nav-btn.next:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+}
+
+@media (max-width: 1024px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .team-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .team-card {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .team-image {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
