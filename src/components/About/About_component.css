@@ -39,6 +39,7 @@
 
 .about-statements {
   display: flex;
+  color: #f3f3f3;
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 2rem;
@@ -47,7 +48,7 @@
 .about-statements p {
   font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.6;
-  color: #fff;
+  color: #ffffff;
 }
 
 .learn-more-btn {

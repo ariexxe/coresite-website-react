@@ -38,7 +38,7 @@ const Hero = () => {
         </motion.div>
         <motion.div 
   className="hero-image"
-  initial={{ opacity: 0, scale: 0.9 }}
+  initial={{ opacity: 5, scale: 1 }}
   animate={{
     opacity: 1,
     scale: 1,

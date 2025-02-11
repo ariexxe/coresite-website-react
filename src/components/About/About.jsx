@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './About.css';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import './About_component.css';
 import developerWorking from '../../assets/developer-working.jpg';
 import bgImage from '../../assets/bg-about-image.jpg'; // Import the background image
 
@@ -45,14 +46,17 @@ const About = () => {
               <p>We help clients focus on what truly matters for their success.</p>
               <p>To empower businesses and individuals by providing them with core digital solutions that make an impact—without the noise or complexity.</p>
             </div>
-            <motion.button
-              className="learn-more-btn"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ duration: 0.3 }}
-            >
-              Learn More
-            </motion.button>
+            {/* Link to the About Us page */}
+            <Link to="/about">
+              <motion.button
+                className="learn-more-btn"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+              >
+                Learn More
+              </motion.button>
+            </Link>
           </motion.div>
           <motion.div
             className="about-image"

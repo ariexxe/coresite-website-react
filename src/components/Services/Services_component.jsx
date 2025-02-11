@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Services.css';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import './Services_component.css';
 import webDev from '../../assets/web-development.png';
 import consulting from '../../assets/consulting.png';
 import marketing from '../../assets/digital-marketing.png';
@@ -89,13 +90,16 @@ const ServicesSection = () => {
           viewport={{ once: true }}
         >
           <p>Need a custom solution? Reach out to us for tailored services.</p>
-          <motion.button
-            className="learn-more-btn"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Learn More
-          </motion.button>
+          {/* Link to the Services page */}
+          <Link to="/services">
+            <motion.button
+              className="learn-more-btn"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Learn More
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 .contact-section {
+  background-color: #f9fafb;
   padding: 2rem;
 }
 
@@ -14,6 +15,15 @@
   .contact-container {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* Add font styles to "Tell us something about your project" section */
+.contact-section h2 {
+  font-family: 'Roboto', sans-serif;  /* Choose your desired font family */
+  font-weight: 600;  /* Medium weight, adjust as needed */
+  font-size: 2.25rem;  /* Font size, adjust if needed */
+  color: #3b82f6;
+  margin-bottom: 1.5rem;
 }
 
 /* Form Styles */
@@ -43,10 +53,11 @@
 }
 
 .form-fields input[type="text"],
-.form-fields input[type="tel"],
+.form-fields input[type="tel"], 
 .form-fields input[type="email"],
 .form-fields select,
 .form-fields textarea {
+  font-family: 'Roboto', sans-serif;  /* Choose your desired font family */
   width: 100%;
   padding: 1rem;
   border: 1px solid #e5e7eb;
