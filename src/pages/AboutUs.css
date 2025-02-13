@@ -15,14 +15,14 @@ body {
   border-radius: 10px;
 }
 
-.about-us h1 {
+.about-us h2 {
   margin-top: 130px;
   font-size: 2.8em;
   color: #007bff;
   margin-bottom: 40px;
 }
 
-.about-us h2 {
+.about-us h1 {
   color: #333;
   font-weight: bold;
   font-size: 2em;
@@ -67,6 +67,7 @@ body {
   justify-content: space-between;
   margin-top: 20px;
   gap: 30px; /* Space between cards */
+  margin-bottom: -120px;
 }
 
 .eme {
@@ -123,8 +124,6 @@ body {
     }
   }
 
-
-
 /* Testimonial */
 .testimonial-section {
   display: flex;
@@ -162,11 +161,11 @@ body {
   color: #0a0a0a;
 }
 
-.testimonial-content {
+.testimonial-content-about {
   flex: 1;
 }
 
-.testimonial-content h3 {
+.testimonial-content-about h3 {
   font-size: 2em;
   color: #007bff;
   margin-bottom: 10px;
@@ -225,7 +224,8 @@ p {
     bottom: -60px;
     right: 24px;
   }
-  .testimonial-content {
+
+  .testimonial-content-about {
     margin-top: 60px;
     margin-bottom: 30px;
     max-width: 100%;
@@ -251,6 +251,71 @@ p {
     height: 150px;
   }
 }
+@media (max-width: 620px){
+  .testimonial-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .quote {
+    bottom: -20px;
+    right: 24px;
+  }
+  .testimonial-content-about {
+    margin-top: 60px;
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 550px){
+  .testimonial-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .quote {
+    bottom: 50px;
+    right: 24px;
+  }
+  .testimonial-content-about {
+    margin-top: -60px;
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 447px){
+  .testimonial-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .quote {
+    bottom: 90px;
+    right: 24px;
+  }
+  .testimonial-content-about {
+    margin-top: -60px;
+    max-width: 100%;
+  }
+
+}
 
 @media (max-width: 425px){
   .testimonial-image {
@@ -267,7 +332,7 @@ p {
     bottom: 90px;
     right: 24px;
   }
-  .testimonial-content {
+  .testimonial-content-about {
     margin-top: -60px;
     max-width: 100%;
   }
@@ -549,3 +614,4 @@ p {
     height: 150px;
   }
 }
+

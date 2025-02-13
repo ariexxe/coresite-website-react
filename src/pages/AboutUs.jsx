@@ -29,13 +29,13 @@ const fadeInRight = {
 const AboutUs = () => {
   return (
     <div className="about-us">
-      <motion.h1 initial="hidden" whileInView="visible" variants={fadeInUp}>
-        About Us
-      </motion.h1>
-
       <motion.h2 initial="hidden" whileInView="visible" variants={fadeInUp}>
-        Empowering Businesses With Minimalist Solutions
+        About Us
       </motion.h2>
+
+      <motion.h1 initial="hidden" whileInView="visible" variants={fadeInUp}>
+        Empowering Businesses With Minimalist Solutions
+      </motion.h1>
 
       <motion.p initial="hidden" whileInView="visible" variants={fadeInUp}>
         At CoreSite, we focus on simplifying digital experiences through
@@ -136,7 +136,7 @@ const AboutUs = () => {
             <p>Founder</p>
           </div>
         </div>
-        <div className="testimonial-content">
+        <div className="testimonial-content-about">
           <h3>We Empower Businesses To Grow Faster And Smarter</h3>
           <blockquote>
             “Working with CoreSite made our branding stronger and website
