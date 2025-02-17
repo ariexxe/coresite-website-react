@@ -11,12 +11,12 @@ body {
   max-width: 1024px;
   margin: auto;
   text-align: center;
-  padding: 10px;
+  padding: 60px 20px;
   border-radius: 10px;
 }
 
 .about-us h2 {
-  margin-top: 130px;
+  
   font-size: 2.8em;
   color: #007bff;
   margin-bottom: 40px;
@@ -62,9 +62,9 @@ body {
 .eme-container {
   max-width: 1000px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   font-display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 20px;
   gap: 30px; /* Space between cards */
   margin-bottom: -120px;
@@ -121,6 +121,12 @@ body {
   
     .image-gallery img:first-child {
       display: block; /* Show only the first image */
+    }
+
+    .eme-container {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1px;
     }
   }
 

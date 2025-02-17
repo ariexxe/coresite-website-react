@@ -17,7 +17,6 @@
   }
 }
 
-/* Add font styles to "Tell us something about your project" section */
 .contact-section h2 {
   font-family: 'Roboto', sans-serif;  /* Choose your desired font family */
   font-weight: 600;  /* Medium weight, adjust as needed */
@@ -61,7 +60,7 @@
   width: 100%;
   padding: 1rem;
   border: 1px solid #e5e7eb;
-  border-radius: 12px;
+  border-radius: 50px;
   font-size: 1rem;
   box-sizing: border-box;
   transition: border-color 0.3s ease;

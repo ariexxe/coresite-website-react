@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Blog.css";
+import "./Blogs.css";
 import { motion } from "framer-motion";
 import blog1 from "../../assets/blog-web-design-types.jpg";
 import blog2 from "../../assets/blog-mascots-design.jpg";
@@ -42,7 +42,7 @@ const blogPosts = [
   },
 ];
 
-const Blog = () => {
+const Blogs = () => {
   const [expandedPost, setExpandedPost] = useState(null);
 
   return (
@@ -95,4 +95,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Blogs;

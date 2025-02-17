@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import "./Contact.css";
+import "./Contacts.css";
 import mapImage from "../../assets/path-to-your-map-image.jpg";
 
 const Contact = () => {
@@ -91,22 +91,27 @@ const Contact = () => {
                 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
               />
 
-              <motion.div
-                className="privacy-policy"
-                variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
-              >
-                <input
-                  type="checkbox"
-                  name="acceptPolicy"
-                  id="privacy-policy"
-                  checked={formData.acceptPolicy}
-                  onChange={handleChange}
-                  required
-                />
-                <label htmlFor="privacy-policy">
-                  I accept your <span className="policy-link">Privacy Policy</span>
-                </label>
-              </motion.div>
+<div className="PrivacyPolicy">
+            <label className="CustomCheckbox">
+              <input
+                type="checkbox"
+                name="acceptPolicy"
+                checked={formData.acceptPolicy}
+                onChange={handleChange}
+                required
+              />
+              <svg viewBox="0 0 64 64" height="1.3em" width="1.5em">
+                <path
+                  d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                  pathLength="575.0541381835938"
+                  className="CheckboxPath"
+                ></path>
+              </svg>
+            </label>
+            <label className="PolicyText">
+              I accept your <span className="PolicyLink">Privacy Policy</span>
+            </label>
+          </div>
 
               <motion.button
                 type="submit"

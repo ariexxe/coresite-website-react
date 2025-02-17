@@ -13,10 +13,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   // Close menu when route changes
   useEffect(() => {
     setIsOpen(false);
@@ -26,7 +22,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
-        setIsOpen(false);  // Close menu if resizing to desktop mode
+        setIsOpen(false); // Close menu if resizing to desktop mode
       }
     };
 
@@ -41,7 +37,7 @@ const Navbar = () => {
           <img src={CoresiteLogo} alt="CoreSite Logo" />
         </Link>
 
-        {/* Apply visibility via CSS and use motion only for links */}
+        {/* Navigation Links */}
         <div className={`nav-links ${isOpen ? "active" : ""}`}>
           {["/", "/about", "/services", "/blog", "/contact"].map((path, index) => (
             <motion.div
@@ -57,20 +53,13 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hamburger" onClick={toggleMenu}>
-          <motion.span 
-            animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 5 : 0 }} 
-            transition={{ duration: 0.3 }} 
-          />
-          <motion.span 
-            animate={{ opacity: isOpen ? 0 : 1 }} 
-            transition={{ duration: 0.3 }} 
-          />
-          <motion.span 
-            animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -5 : 0 }} 
-            transition={{ duration: 0.3 }} 
-          />
-        </div>
+        {/* Custom Checkbox-Based Hamburger */}
+        <input id="checkbox2" type="checkbox" checked={isOpen} onChange={() => setIsOpen(!isOpen)} />
+        <label className="toggle toggle2" htmlFor="checkbox2">
+          <div id="bar4" className="bars"></div>
+          <div id="bar5" className="bars"></div>
+          <div id="bar6" className="bars"></div>
+        </label>
       </div>
     </nav>
   );

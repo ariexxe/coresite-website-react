@@ -1,36 +1,331 @@
-.blog-page {
-    padding: 8rem 0 4rem;
+/* Blog Section Container */
+.BlogContainer {
+  display: block !important;
+  opacity: 1 !important;
+  padding: 110px 0;
+  background: #ffffff;
+}
+
+/* Blog Header */
+.BlogHeader h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #007BFF;
+  margin-bottom: 1rem;
+}
+
+.BlogHeader p {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Best of the Week Section */
+.BestOfWeek {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 20px;
+}
+
+.BestOfWeek h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.BestOfWeek a {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Blog Grid Layout */
+.BlogGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+  align-items: start;
+}
+
+/* Left Blogs (Two Smaller Posts) */
+.LeftBlogs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Blog Card Base */
+.BlogCard {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Pseudo-element for background blur effect */
+.BlogCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  transition: filter 0.5s ease;
+}
+
+/* Apply blur effect on hover */
+.BlogCard:hover::before {
+  filter: blur(5px);
+}
+
+/* Text Overlay */
+.TextOverlay {
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+/* Large Blog */
+.LargeCard {
+  height: 620px;
+}
+
+/* Small Blogs */
+.SmallCard {
+  height: 300px;
+}
+
+/* Overlay Text Content */
+.TextOverlay {
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.TextOverlay h4 {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.TextOverlay h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.TextOverlay p {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+  .BlogGrid {
+    grid-template-columns: 1fr; /* Stack layout */
   }
-  
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+
+  .LargeCard {
+    height: 450px; /* Adjust height */
   }
-  
-  .blog-card {
-    background: var(--light-gray);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+
+  .SmallCard {
+    height: 250px;
   }
-  
-  .blog-card:hover {
-    transform: translateY(-5px);
+
+  .BestOfWeek {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
-  
-  .blog-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+}
+
+/* Blog Listing Container */
+.BlogListContainer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.RecommendedTitle {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.BlogListHeader h2 {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #007BFF;
+  margin-bottom: 1rem;
+}
+
+/* Filter Bar */
+.FilterBar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.FilterButton {
+  background: white;
+  border: 2px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.FilterButton span {
+  transition: transform 0.3s ease;
+}
+
+.FilterButton:hover span {
+  transform: rotate(180deg);
+}
+
+/* Blog Card Grid */
+.BlogCardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card Container */
+.CardContainer {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  border-radius: 40px;
+}
+
+/* Card Hover Effect */
+.CardContainer::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.582);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+/* Card */
+.Card {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Image Background */
+.ImgContent {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: scale 0.6s, rotate 0.6s, filter 1s;
+}
+
+/* Card Content */
+.Content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.486);
+  padding: 20px;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.Category {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+}
+
+.Heading {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+
+.Content a {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover Effects */
+.Card:hover .Content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Card:hover .ImgContent {
+  scale: 1.1;
+  filter: blur(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .BlogCardGrid {
+    grid-template-columns: 1fr;
   }
-  
-  .blog-content {
-    padding: 1.5rem;
+
+  .FilterButton {
+    font-size: 14px;
+    padding: 8px 15px;
   }
-  
-  @media (max-width: 768px) {
-    .blog-grid {
-      grid-template-columns: 1fr;
-    }
+}
+
+/* Disable Hover Effects on Mobile */
+@media (hover: none) {
+  .Card:hover .ImgContent {
+    scale: 1;
+    filter: none;
   }
+
+  .BlogCard:hover::before {
+    filter: none;
+  }
+}

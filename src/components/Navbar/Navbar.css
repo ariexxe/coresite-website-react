@@ -1,6 +1,6 @@
 :root {
-  --text-color: black;  /* Set your text color variable to black */
-  --primary-color: #007bff;  /* Set the primary color for hover and active states */
+  --text-color: black;
+  --primary-color: #007bff;
 }
 
 .navbar {
@@ -28,7 +28,7 @@
 }
 
 .nav-links {
-  display: flex; /* Display normally in PC mode */
+  display: flex;
   gap: 4rem;
   font-size: 1.1rem;
   font-weight: bold;
@@ -46,38 +46,72 @@
   color: var(--primary-color);
 }
 
-.hamburger {
+/* Custom Checkbox-Based Toggle */
+#checkbox2 {
   display: none;
-  flex-direction: column;
-  gap: 6px;
+}
+
+.toggle2 {
+  position: relative;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition-duration: 0.5s;
+  z-index: 1100;
 }
 
-.hamburger span {
-  width: 25px;
-  height: 2px;
-  background: var(--text-color);
-  transition: all 0.3s ease;
+.bars {
+  width: 80%;
+  height: 5px;
+  background-color: rgb(92, 176, 255);
+  border-radius: 6px;
 }
 
+#bar5 {
+  transition-duration: 0.8s;
+}
+
+#bar4, #bar6 {
+  width: 60%;
+}
+
+/* Animation when checkbox is checked */
+#checkbox2:checked + .toggle2 .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #bar5 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #bar4 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #bar6 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+/* Responsive Navbar */
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;display: flex;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-    z-index: 1100; /* Ensure it's above the navbar */
-  }
-
-  .hamburger span {
-    width: 25px;
-    height: 2px;
-    background: var(--text-color);
-    transition: all 0.3s ease;
-  }
-
   .nav-links {
-    display: none;  /* Hide by default in mobile */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -89,22 +123,25 @@
   }
 
   .nav-links.active {
-    display: flex;  /* Show when active */
-    opacity: 1; /* Ensure full opacity when visible */
+    display: flex;
+    opacity: 1;
     transition: opacity 0.3s ease-in-out;
+  }
+
+  .toggle2 {
+    display: flex;
   }
 }
 
-/* This media query ensures the links are always visible in desktop mode */
 @media (min-width: 769px) {
   .nav-links {
-    display: flex !important;  /* force display flex for desktop */
+    display: flex !important;
     opacity: 1;
-    position: static;  /* make sure the nav links are not absolute */
-    transform: none;   /* Ensure no transition is applied in desktop mode */
+    position: static;
+    transform: none;
   }
 
-  .hamburger {
+  .toggle2 {
     display: none;
   }
 }
