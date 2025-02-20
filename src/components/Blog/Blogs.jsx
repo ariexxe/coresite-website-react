@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Blogs.css";
+import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import blog1 from "../../assets/blog-web-design-types.jpg";
 import blog2 from "../../assets/blog-mascots-design.jpg";
@@ -78,14 +79,15 @@ const Blogs = () => {
                 {expandedPost === post.id ? (
                   <p className="blog-description-expanded">{post.description}</p>
                 ) : null}
-                <button
+                <Link to="/blog">
+                <motion.button
                   className="read-more"
-                  onClick={() =>
-                    setExpandedPost(expandedPost === post.id ? null : post.id)
-                  }
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  {expandedPost === post.id ? "Read Less" : "Read More"}
-                </button>
+                  Read More
+                </motion.button>
+                </Link>
               </div>
             </motion.div>
           ))}

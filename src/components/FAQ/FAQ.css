@@ -74,6 +74,7 @@
 }
 
 .faq-question {
+  color: #333;
   width: 100%;
   text-align: left;
   padding: 1rem;
@@ -98,8 +99,8 @@
 }
 
 .faq-answer {
+  color: #333;
   padding: 1rem;
-  background: white;
   margin-top: 2px;
   border-radius: 0 0 8px 8px;
 }

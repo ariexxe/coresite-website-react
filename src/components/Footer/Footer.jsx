@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Footer.css";
 import CoresiteLogo from "../../assets/Logo.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faFacebook, faTwitter, faInstagram, faBehance, faDribbble } from '@fortawesome/free-brands-svg-icons';
+
 
 const Footer = () => {
   return (
@@ -92,27 +95,58 @@ const Footer = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <motion.div
-            className="social-links"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            {["facebook", "twitter", "instagram", "behance", "dribbble"].map((platform, index) => (
-              <motion.a
-                key={index}
-                href="#"
-                whileHover={{ scale: 1.2 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <i className={`fab fa-${platform}`}></i>
-              </motion.a>
-            ))}
-          </motion.div>
+          <ul className="example-2">
+  <li className="icon-content">
+    <a href="https://github.com/ariexxe" aria-label="GitHub" data-social="github">
+      <div className="filled"></div>
+      <FontAwesomeIcon icon={faGithub} size="2x" />
+    </a>
+    <div className="tooltip">GitHub</div>
+  </li>
+
+  <li className="icon-content">
+    <a href="https://www.facebook.com/princess.manatiga" aria-label="Facebook" data-social="facebook">
+      <div className="filled"></div>
+      <FontAwesomeIcon icon={faFacebook} size="2x" />
+    </a>
+    <div className="tooltip">Facebook</div>
+  </li>
+
+  <li className="icon-content">
+    <a href="https://x.com/arie_xxe" aria-label="X (Twitter)" data-social="twitter">
+      <div className="filled"></div>
+      <FontAwesomeIcon icon={faTwitter} size="2x" />
+    </a>
+    <div className="tooltip">X</div>
+  </li>
+
+  <li className="icon-content">
+    <a href="https://www.instagram.com/arie_xxe/" aria-label="Instagram" data-social="instagram">
+      <div className="filled"></div>
+      <FontAwesomeIcon icon={faInstagram} size="2x" />
+    </a>
+    <div className="tooltip">Instagram</div>
+  </li>
+
+  <li className="icon-content">
+    <a href="https://www.behance.net/arielleperez" aria-label="Behance" data-social="behance">
+      <div className="filled"></div>
+      <FontAwesomeIcon icon={faBehance} size="2x" />
+    </a>
+    <div className="tooltip">Behance</div>
+  </li>
+
+  <li className="icon-content">
+    <a href="https://dribbble.com/ariexxe" aria-label="Dribble" data-social="dribble">
+      <div className="filled"></div>
+      <FontAwesomeIcon icon={faDribbble} size="2x" />
+    </a>
+    <div className="tooltip">Dribble</div>
+  </li>
+</ul>
 
           <motion.div
-            className="contact-info"
+            className="contact-info-footer"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}

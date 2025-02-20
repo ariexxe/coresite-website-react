@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import "./Contact.css";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faFacebook, faTwitter, faInstagram, faBehance, faDribbble } from '@fortawesome/free-brands-svg-icons';
 import ContactHero from "../../src/assets/contact-us-image.png"; 
 import supportImage from "../../src/assets/support-agent.png";
 import emailImage from "../../src/assets/email-support.png";
@@ -205,6 +207,59 @@ const Contact = () => {
           </a>
         </p>
       </div>
+      
+      <div className="SocialLinks">
+      <h2>Follow Us Here</h2>
+      </div>
+                <ul className="example-2">
+        <li className="icon-content">
+          <a href="https://github.com/ariexxe" aria-label="GitHub" data-social="github">
+            <div className="filled"></div>
+            <FontAwesomeIcon icon={faGithub} size="2x" />
+          </a>
+          <div className="tooltip">GitHub</div>
+        </li>
+      
+        <li className="icon-content">
+          <a href="https://www.facebook.com/princess.manatiga" aria-label="Facebook" data-social="facebook">
+            <div className="filled"></div>
+            <FontAwesomeIcon icon={faFacebook} size="2x" />
+          </a>
+          <div className="tooltip">Facebook</div>
+        </li>
+      
+        <li className="icon-content">
+          <a href="https://x.com/arie_xxe" aria-label="X (Twitter)" data-social="twitter">
+            <div className="filled"></div>
+            <FontAwesomeIcon icon={faTwitter} size="2x" />
+          </a>
+          <div className="tooltip">X</div>
+        </li>
+      
+        <li className="icon-content">
+          <a href="https://www.instagram.com/arie_xxe/" aria-label="Instagram" data-social="instagram">
+            <div className="filled"></div>
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
+          </a>
+          <div className="tooltip">Instagram</div>
+        </li>
+      
+        <li className="icon-content">
+          <a href="https://www.behance.net/arielleperez" aria-label="Behance" data-social="behance">
+            <div className="filled"></div>
+            <FontAwesomeIcon icon={faBehance} size="2x" />
+          </a>
+          <div className="tooltip">Behance</div>
+        </li>
+      
+        <li className="icon-content">
+          <a href="https://dribbble.com/ariexxe" aria-label="Dribble" data-social="dribble">
+            <div className="filled"></div>
+            <FontAwesomeIcon icon={faDribbble} size="2x" />
+          </a>
+          <div className="tooltip">Dribble</div>
+        </li>
+      </ul>
     </div>
     <FAQ/>
     </motion.section>

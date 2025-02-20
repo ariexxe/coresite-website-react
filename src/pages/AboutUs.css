@@ -4,19 +4,17 @@ body {
   padding: 20px;
   width: 100%;
   height: 100%;
- 
 }
 
 .about-us {
   max-width: 1024px;
   margin: auto;
   text-align: center;
-  padding: 60px 20px;
   border-radius: 10px;
 }
 
 .about-us h2 {
-  
+  margin-top: 2rem;
   font-size: 2.8em;
   color: #007bff;
   margin-bottom: 40px;

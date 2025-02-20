@@ -171,20 +171,110 @@
   color: #3b82f6;
 }
 
-.social-links {
+
+/* Social Media Icons */
+.example-2 {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
 }
 
-.social-links a {
-  font-size: 1.75rem;
-  color: #4b5563;
-  transition: color 0.3s ease;
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
 }
 
-.social-links a:hover {
-  color: #3b82f6;
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 90%;
+  color: #4d4d4d;
+  background-color: #ffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.example-2 .icon-content a:hover {
+  color: white;
+}
+
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #333;
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #1877f2;
+}
+
+.example-2 .icon-content a[data-social="twitter"] .filled,
+.example-2 .icon-content a[data-social="twitter"] ~ .tooltip {
+  background-color: #1da1f2;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(45deg, #F58529, #D93F7E, #8134AF);
+}
+
+.example-2 .icon-content a[data-social="behance"] .filled,
+.example-2 .icon-content a[data-social="behance"] ~ .tooltip {
+  background-color: #1769ff;
+}
+
+.example-2 .icon-content a[data-social="dribble"] .filled,
+.example-2 .icon-content a[data-social="dribble"] ~ .tooltip {
+  background-color: #ea4c89;
 }
 
 .contact-info {
@@ -218,9 +308,9 @@
   .form-title {
     font-size: 1.75rem;
   }
-
-  .social-links a {
-    font-size: 1.5rem;
+  .example-2 .icon-content a {
+    width: 40px;
+    height: 40px;
   }
 
   .map-image {

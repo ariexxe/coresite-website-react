@@ -212,19 +212,62 @@ textarea {
   }
 }
 
-@media (max-width: 375px) {
-  .ContactForm {
-    padding: 1rem;
+@media screen and (max-width: 425px) {
+  .ContactSection {
+    padding: 10px;
+    margin-top: 6rem;
   }
 
-  .SendButton {
-    padding: 12px;
+  .ContactTitle {
+    font-size: 2rem;
+  }
+
+  .ContactSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .ContactContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
   .ContactImage {
-    max-width: 200px; /* Smaller for mobile */
+    max-width: 100%;
+    margin-top: 1rem;
+    order: -1;
+  }
+
+  .ContactForm {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .Input-Title {
+    font-size: 1.5rem;
+  }
+
+  .InputGroup {
+    flex-direction: column;
+    height: auto;
+  }
+
+  input, select, textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  .SendButton {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
   }
 }
+
 
 /* Contact Cards Section */
 .ContactCards {
@@ -449,3 +492,17 @@ textarea {
   }
 }
 
+.SocialLinks {
+  margin-top: 1.5rem;
+  display: flex;
+  font-size: 1.5rem;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .SocialLinks {
+    font-size: 1.2rem;
+  }
+  
+}

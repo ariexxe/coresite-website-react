@@ -39,7 +39,7 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className={`nav-links ${isOpen ? "active" : ""}`}>
-          {["/", "/about", "/services", "/blog", "/contact"].map((path, index) => (
+          {["/", "/About", "/Services", "/Blog", "/Contact"].map((path, index) => (
             <motion.div
               key={index}
               variants={linkVariants}
