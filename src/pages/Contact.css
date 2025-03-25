@@ -21,7 +21,7 @@
 
 .ContactContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
@@ -30,7 +30,6 @@
 .ContactImage {
   max-width: 450px;
   margin-top: 2rem;
-  order: -1; /* Ensure the image is above the form */
 }
 
 .ContactForm {

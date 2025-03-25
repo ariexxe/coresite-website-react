@@ -1,58 +1,145 @@
+.featured {
+  background-color: white;
+  margin-top: 0rem; /* Keeps space between hero and featured */
+  padding: 0rem 2rem;
+  text-align: left;
+}
 
-  
-  .featured {
-    background-color: white;
-    margin-top: 0rem; /* Add space between hero and featured */
-    
-  }
-  
-  .featured h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-  }
-  
+.featured h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0rem;
+}
+
+.featured-logos {
+  background: #f1f1f1;
+  border-radius: 100px;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.featured-logos img {
+  max-width: 120px;
+  height: auto;
+  filter: grayscale(100%) brightness(0.7);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.featured-logos img:hover {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.05);
+}
+
+/* 🔹 1440px - Large Desktop */
+@media (max-width: 1440px) {
   .featured-logos {
-    background: #f1f1f1;
-    border-radius: 100px;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap; /* Ensure logos can wrap on smaller screens */
+    padding: 2rem;
   }
-  
+}
+
+/* 🔹 1024px - Small Desktops & Tablets */
+@media (max-width: 1024px) {
+  .featured h3 {
+    font-size: 1.6rem;
+  }
+
+  .featured-logos {
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+  }
+
   .featured-logos img {
     max-width: 100px;
-    height: auto;
-    filter: grayscale(100%) brightness(0.7);
-    transition: filter 0.3s ease;
   }
-  
-  .featured-logos img:hover {
-    filter: grayscale(0%) brightness(1);
+}
+
+/* 🔹 834px - Tablets */
+@media (max-width: 834px) {
+  .featured {
+    padding: 3rem 1.5rem;
   }
-  
-  @media (max-width: 768px) {
-    .featured {
-        padding: 2rem 1rem; /* Reduced padding for smaller screens */
-    }
 
-    .featured h3 {
-        font-size: 1.8rem; /* Adjusted font size for mobile */
-    }
+  .featured-logos {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
 
-    .featured-logos {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-        padding: 1.5rem 1rem; /* Added more padding for better spacing */
-    }
+  .featured-logos img {
+    max-width: 90px;
+  }
+}
 
-    .featured-logos img {
-        width: 80px; /* Adjusted logo size for smaller screens */
-        max-width: 90px; /* Max width to avoid stretching */
-        padding: 0.8rem; /* Reduced padding around logos */
-    }
+/* 🔹 768px - Tablets */
+@media (max-width: 768px) {
+  .featured {
+    padding: 2.5rem 1rem;
+  }
+
+  .featured h3 {
+    font-size: 1.5rem;
+  }
+
+  .featured-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .featured-logos img {
+    width: 80px;
+    max-width: 85px;
+    padding: 0.5rem;
+  }
+}
+
+/* 🔹 480px - Mobile */
+@media (max-width: 480px) {
+  .featured {
+    padding: 2rem 0.5rem;
+  }
+
+  .featured h3 {
+    font-size: 1.3rem;
+  }
+
+  .featured-logos {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1.2rem;
+    border-radius: 50px;
+  }
+
+  .featured-logos img {
+    width: 70px;
+    max-width: 75px;
+    padding: 0.4rem;
+  }
+}
+
+/* 🔹 325px - Small Mobile */
+@media (max-width: 325px) {
+  .featured {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .featured h3 {
+    font-size: 1.2rem;
+  }
+
+  .featured-logos {
+    gap: 0.8rem;
+    padding: 1rem;
+    border-radius: 40px;
+  }
+
+  .featured-logos img {
+    width: 65px;
+    max-width: 70px;
+    padding: 0.3rem;
+  }
 }

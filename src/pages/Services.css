@@ -189,10 +189,10 @@ body{
   }
   
   
-  .testimonial-subtitle {
+  .testimonial-container p {
     color: white;
     font-size: 18px;
-    margin-bottom: 90px;
+    margin-bottom: 3rem;
     opacity: 0.9;
   }
   
@@ -339,7 +339,7 @@ body{
     border-radius: 50%;
     border: 2px solid #e5e7eb;
     background: transparent;
-    color: #666;
+    color: #ffffff;
     cursor: pointer;
     display: flex;
     align-items: center;

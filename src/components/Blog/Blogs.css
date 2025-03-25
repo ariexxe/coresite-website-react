@@ -74,3 +74,19 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .blog-title {
+    font-size: 2rem;
+  }
+
+  .blog-description {
+    font-size: 1rem;
+  }
+  .blog-content {
+    padding: 0rem;
+  }
+  .blog-content h3{
+    font-size: 1.3rem;
+  }
+}

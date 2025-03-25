@@ -290,7 +290,33 @@
   color: #3b82f6;
 }
 
-/* Responsive adjustments */
+/* 🔹 Additional Breakpoints */
+@media (max-width: 1440px) {
+  .contact-container {
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-container {
+    gap: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 834px) {
+  .contact-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-section {
     padding: 1rem;
@@ -308,6 +334,7 @@
   .form-title {
     font-size: 1.75rem;
   }
+
   .example-2 .icon-content a {
     width: 40px;
     height: 40px;
@@ -320,15 +347,82 @@
 }
 
 @media (max-width: 480px) {
-  .form-title {
-    font-size: 1.5rem;
+  .form-fields input[type="text"],
+  .form-fields input[type="tel"],
+  .form-fields input[type="email"],
+  .form-fields select,
+  .form-fields textarea {
+    padding: 0.75rem; /* Reduce padding */
+    font-size: 0.9rem;
+    border-radius: 25px; /* Reduce border radius */
   }
 
-  .form-fields {
-    gap: 1rem;
+  .form-fields textarea {
+    min-height: 4rem; /* Reduce textarea height */
+  }
+
+  .privacy-policy {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.9rem; /* Smaller font */
   }
 
   .submit-btn {
-    padding: 1rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-container {
+    max-width: 100%; /* Ensures it doesn't overflow */
+    width: 100%;
+    margin: 0 auto; /* Centers it properly */
+    padding: 0 0rem; /* Adds slight padding for spacing */
+  }
+
+  .form-container {
+    max-width: 85%; /* Ensures it fits properly */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .form-fields input[type="text"],
+  .form-fields input[type="tel"],
+  .form-fields input[type="email"],
+  .form-fields select,
+  .form-fields textarea {
+    padding: 0.6.5rem; /* Reduce padding */
+    font-size: 0.85rem; /* Smaller font size */
+    border-radius: 20px; /* Reduce border radius */
+  }
+
+  .form-fields textarea {
+    min-height: 3.5rem; /* Reduce textarea height */
+  }
+
+  .privacy-policy {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.8rem; /* Adjust text size */
+  }
+
+  .submit-btn {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    width: 90%;
+    max-width: 280px; /* Prevents full-width stretching */
+    margin: 0 auto; /* Centers the button */
+  }
+
+  .form-title {
+    font-size: 1.5rem; /* Adjust heading size */
+    text-align: left;
+  }
+
+  .info-container {
+    max-width: 85%; /* Ensures it fits properly */
+    padding: 0rem; /* Reduce padding */
   }
 }
